@@ -32,7 +32,6 @@ sudo pacman -S --noconfirm npm
 sudo pacman -S --noconfirm python-pylint
 sudo pacman -S --noconfirm autopep8
 sudo pacman -S --noconfirm python-virtualenv
-nvim --headless +'PlugInstall --sync' +qall
 
 
 
@@ -52,6 +51,8 @@ stow ctags
 stow zsh
 stow powerlevel10k
 stow nvim
+
+nvim --headless +'PlugInstall --sync' +qall
 
 
 LINE='/usr/sbin/zsh'
