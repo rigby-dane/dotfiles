@@ -55,11 +55,12 @@ colorscheme gruvbox
 " TODO: Organize into seperate files?
 
 " Highlighting options
-let g:python_highlight_all = 1
+let g:python_highlight_all=1
 
 " Airline Settings
 let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_powerline_fonts=1 
+let g:airline#extensions#tabline#enabled=1
 
 " COC Settings
 
