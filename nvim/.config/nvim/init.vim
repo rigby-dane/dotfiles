@@ -6,6 +6,7 @@ set encoding=utf8
 set hidden
 
 set relativenumber
+set number
 
 set shiftwidth=4
 set tabstop=4
@@ -21,13 +22,13 @@ set splitbelow
 
 set incsearch
 
-let mapleader = ';'
-
 ""Settings for coc.nvim
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 set re=0
+
+let mapleader = ';'
 
 syntax on
 
@@ -46,6 +47,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'airblade/vim-rooter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
@@ -172,14 +174,11 @@ command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImpo
 
 " NerdTree Settings
 
-noremap <leader>n :NERDTreeToggle <CR>
+noremap <silent> <leader>n :NERDTreeToggle <CR>
 
 " NerdCommenter Settings
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
-"
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
 "
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
@@ -197,19 +196,30 @@ set tags=./tags
 set cpoptions+=d
 
 " Closetag settings
-let g:closetag_xhtml_filetypes = 'xhtml,jsx,tsx'
-let g:closetag_filetypes = 'html,xhtml,jsx,tsx'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,tsx,typescriptreact'
+let g:closetag_filetypes = 'html,xhtml,jsx,tsx,typescriptreact'
 let g:closetag_regions = {
     \ 'typescript.tsx': 'jsxRegion,tsxRegion',
     \ 'javascript.jsx': 'jsxRegion',
     \ }
-  
 
+" Vim-Fugitive Settings
+
+nmap <leader>gs :G<CR>
+nmap <leader>gl :diffget //3<CR>
+nmap <leader>gh :diffget //2<CR>
+
+
+" Language Specific Settings
+autocmd FileType javascript,jsx,typescript,tsx,typescriptreact,xml setlocal shiftwidth=2|setlocal tabstop=2
 
 " Misc Settings/Keybinds
 nnoremap <silent> <S-Tab> :bp <CR>
 nnoremap <silent> <Tab> :bn <CR>
 nnoremap <silent> <leader>d :bd <CR>
+
+nnoremap ? ;
+vnoremap ? ;
 
 " Custom Scripts
 
