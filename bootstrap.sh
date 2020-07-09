@@ -47,12 +47,37 @@ rustup component add rls rust-analysis rust-src
 
 sudo npm install -g neovim
 
+stow background
 stow ctags
-stow zsh
-stow powerlevel10k
+stow fontconfig
+stow i3
 stow nvim
+stow picom
+stow polybar
+stow powerlevel10k
+stow ranger
+stow termite
+stow zsh
 
 nvim --headless +'PlugInstall --sync' +qall
+
+sudo pacman -S --noconfirm openssh
+sudo pacman -S --noconfirm xorg-xfd
+sudo pacman -S --noconfirm ttf-hack
+sudo pacman -S --noconfirm i3-gaps
+sudo pacman -S --noconfirm i3status
+sudo pacman -S --noconfirm picom
+sudo pacman -S --noconfirm feh
+yay -S --noconfirm siji-git
+sudo pacman -S --noconfirm ttf-dejavu
+sudo pacman -S --noconfirm ttf-font-awesome
+yay -S --noconfirm ttf-unifont
+fc-cache -f -v
+yay -S --noconfirm polybar
+yay -S --noconfirm ttf-ms-fonts
+
+sudo pacman -S --noconfirm ranger
+sudo pacman -S --noconfirm rofi
 
 
 LINE='/usr/sbin/zsh'

@@ -221,7 +221,14 @@ nnoremap <silent> <leader>d :bd <CR>
 nnoremap ? ;
 vnoremap ? ;
 
+" Trying this out to see if I like this bind to normal mode
+inoremap kj <Esc>
+
 " Custom Scripts
+
+" For a transparent background -> Remove if not needed/wanted
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
 
 nnoremap <leader>r :call CompileAndRunSingleFile()<CR>
 
@@ -262,7 +269,6 @@ function! CompileAndRunSingleFile()
     let s:job_id = jobstart(l:cmd, {'on_stdout': function('s:on_event'), 'on_stderr': function('s:on_event')})
     call jobwait([s:job_id])
     call nvim_buf_set_lines(s:created_buf, 0, s:line_num, v:false, s:lines)
-
 endfunction
 
 

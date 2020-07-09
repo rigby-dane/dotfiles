@@ -1,6 +1,6 @@
 {
     "python.jediEnabled": false,
-    "coc.preferences.formatOnSaveFiletypes": ["css", "html", "tsx", "ts", "js", "jsx", "python", "rust"],
+    "coc.preferences.formatOnSaveFiletypes": ["css", "html", "tsx", "ts", "js", "jsx", "rust", "python"],
     "languageserver": {
         "ccls": {
             "command": "ccls",
