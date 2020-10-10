@@ -48,6 +48,8 @@ Plug 'airblade/vim-rooter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-fugitive'
+Plug 'machakann/vim-sandwich'
+Plug 'jeetsukumaran/vim-pythonsense'
 call plug#end()
 
 
