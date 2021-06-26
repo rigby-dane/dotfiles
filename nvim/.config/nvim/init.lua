@@ -7,3 +7,4 @@ require("statusline")
 require("treesitter")
 
 vim.cmd [[ colorscheme gruvbox-flat ]]
+vim.g.gruvbox_flat_style = "dark"

@@ -5,13 +5,14 @@ return require("packer").startup(
         use "wbthomason/packer.nvim"
 
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-        use {"eddyekofo94/gruvbox-flat.nvim"}
+        use {"eddyekofo94/gruvbox-flat.nvim", commit="56f856990f9e902b4ab5af64c3eac46440c705dd"}
 
         use {"neovim/nvim-lspconfig"}
         use {"hrsh7th/nvim-compe"}
         use {"glepnir/lspsaga.nvim"}
+        use {"nvim-lua/lsp-status.nvim"}
+        use {"kyazdani42/nvim-tree.lua"}
 
-        use {"ms-jpq/chadtree", branch = "chad", run = "python3 -m chadtree deps"}
         use {"nvim-telescope/telescope.nvim", requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}}
         use {"ludovicchabant/vim-gutentags"}
         use {"hrsh7th/vim-vsnip"}
