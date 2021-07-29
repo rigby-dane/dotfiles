@@ -35,3 +35,6 @@ PERL5LIB="/home/rigby/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB
 PERL_LOCAL_LIB_ROOT="/home/rigby/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/rigby/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/rigby/perl5"; export PERL_MM_OPT;
+
+export BROWSER='/mnt/c/Windows/explorer.exe'
+alias see='explorer.exe'
